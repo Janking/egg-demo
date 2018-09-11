@@ -1,0 +1,39 @@
+{% extends '../layout/useraction.html' %} {% block content %}
+<div class="clearfix mod-user">
+  <div class="mod-login">
+    <div class="mod-login-title">
+      <a href="#" class="active">登录</a>
+      <a href="/register">注册</a>
+    </div>
+    <form action="/login" class="mt15 form-login c-form-vertical c-form-vertical-l">
+      <div class="form-group">
+        <div class="col-12">
+          <div class="pr">
+            <input type="text" name="name" class="form-control" placeholder="用户名/手机号" data-required="name">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-12">
+          <div class="pr">
+            <input type="password" name="pass" class="form-control" placeholder="密码" maxlength="16" data-required="pass">
+          </div>
+        </div>
+      </div>
+      <div class="form-group form-btn">
+        <button class="btn btn-primary">登录</button>
+      </div>
+      <div class="form-group">
+        <div class="clearfix mt20">
+          <div class="pull-right">
+            <a href="javascript:;" class="btn-forgetPassword">忘记密码？</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </form>
+</div>
+</div>
+{% include './_forget_password.html'%} {% endblock %} {% block js %}
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script src="{{filePath}}/dist/forgetPassword.js"></script> {% endblock %}

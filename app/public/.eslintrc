@@ -1,0 +1,47 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "jquery": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": "standard",
+  "rules": {
+    "space-before-function-paren": 0,
+    "no-unused-vars": 1,
+    "key-spacing": [
+      2,
+      {
+        "singleLine": {
+          "beforeColon": false,
+          "afterColon": true
+        },
+        "multiLine": {
+          "beforeColon": true,
+          "afterColon": true,
+          "align": "colon"
+        }
+      }
+    ],
+    "no-multi-spaces": [
+      2,
+      {
+        "exceptions": {
+          "ImportDeclaration": true,
+          "VariableDeclarator": true
+        }
+      }
+    ]
+  },
+  "globals": {
+    "template": true,
+    "jscolor": true,
+    "TIME": true,
+    "COMID": true,
+    "USER_NAME": true
+  }
+}
